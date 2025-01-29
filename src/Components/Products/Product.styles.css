@@ -1,0 +1,40 @@
+.items-container{
+    /* height: 100vh; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+#id, .item-id{
+    width: 3em;
+    text-align: center;
+}
+
+#name{
+    width: 12em;
+    margin: 1em;
+    text-align: center;
+}
+#price{
+    text-align: center;
+    width: 6em;
+}
+
+table td{
+    width: 10em;
+    height: 2em;
+    background-color: rgb(170, 220, 203);
+    text-align: center;
+    color: rgb(1, 1, 1);
+}
+
+.delete{
+    margin: 0 0 0 2em;
+}
+
+.add-form input{
+    width: 15em;
+    height: 2em;
+    border-radius: 0.5em;
+    margin: 0 0 0 0.8em;
+}
