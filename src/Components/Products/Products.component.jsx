@@ -38,7 +38,6 @@ const Products = () => {
     const addToShoppingList = (event) => {
         event.preventDefault()
         const { productName, price } = formFields;
-        // const itemPrice = price.toFixed(2)
 
         if (productName.trim() !== "" && price.trim() !== "") {
             if (editingItemId) {
@@ -80,12 +79,6 @@ const Products = () => {
         }))
     }
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault()
-    //     const name = event.target.elements.name.value
-    //     const price = event.target.elements.price.value 
-    // }
-
     return (
         <div className="container items-container flex align-items-center">
             {/* container items-container flex align-items-center */}
@@ -97,7 +90,8 @@ const Products = () => {
                 <input type="number" name="price"
                 value={formFields.price} onChange={handleInputChange}
                 placeholder="Product price"/>
-                <button type="submit" className="bg-primary-subtle rounded">Add To List</button>
+                <button type="submit" className="bg-primary-subtle rounded"
+                >{editingItemId ? "Update Item" : "Add To List"}</button>
             </form>
             <table>
             {list.map((item) => {
@@ -113,7 +107,7 @@ const Products = () => {
                         <td className="item-name">{item.name}</td>
                         <td className="item-price">£{item.price}</td>
                         <td>
-                            <button onClick={() => handleEdit(item.id)} className="bg-info rounded edit">Edit</button>
+                            <button onClick={() => handleEdit(item.id)} className="bg-info rounded edit">{}Edit</button>
                             <button onClick={() => deleteItem(item.id)} className="bg-danger rounded delete">Delete</button>
                         </td>
                     </tbody>
